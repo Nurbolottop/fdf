@@ -12,37 +12,19 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="index.html" class="logo">
-        <span class="logo__icon">✈</span>
-        <span class="logo__text">Sky<strong>Line</strong></span>
-      </a>
-      <nav class="nav" id="nav">
-        {{settings.logo.url}}
-
-        <a href="index.html" class="nav__link nav__link--active">Главная</a>
-        <a href="about.html" class="nav__link">О нас</a>
-        <a href="contacts.html" class="nav__link">Контакты</a>
-      </nav>
-      <a href="contacts.html" class="btn btn--primary header__btn">Купить билет</a>
-      <button class="burger" id="burger" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+   
+  {% include 'include/header.html' %}
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2400&q=80')"></div>
+    <div class="hero__bg" style="background-image:url('{{banner.image.url}}')"></div>
     <div class="hero__overlay"></div>
     <div class="container hero__inner">
       <div class="hero__content reveal">
-        <span class="hero__badge">Летаем по 120 направлениям</span>
-        <h1 class="hero__title">Открой небо <br />вместе со <span>SkyLine</span></h1>
+        <span class="hero__badge">{{banner.title}}</span>
+        <h1 class="hero__title">{{banner.subtitle}}</h1>
         <p class="hero__text">
-          Комфортные перелёты, безупречный сервис и лучшие цены на билеты.
-          Путешествуй туда, где тебя ждут.
+          {{banner.descriptions}}
         </p>
         <div class="hero__actions">
           <a href="contacts.html" class="btn btn--primary">Найти рейс</a>
@@ -78,10 +60,10 @@
   <!-- Stats -->
   <section class="section stats">
     <div class="container stats__grid">
-      <div class="stat reveal"><span class="stat__num">15+</span><span class="stat__label">лет в небе</span></div>
-      <div class="stat reveal"><span class="stat__num">120</span><span class="stat__label">направлений</span></div>
-      <div class="stat reveal"><span class="stat__num">2.4M</span><span class="stat__label">пассажиров в год</span></div>
-      <div class="stat reveal"><span class="stat__num">98%</span><span class="stat__label">рейсов вовремя</span></div>
+      <div class="stat reveal"><span class="stat__num">{{numbers.age}}+</span><span class="stat__label">лет в небе</span></div>
+      <div class="stat reveal"><span class="stat__num">{{numbers.naprav}}</span><span class="stat__label">направлений</span></div>
+      <div class="stat reveal"><span class="stat__num">{{numbers.people}}</span><span class="stat__label">пассажиров в год</span></div>
+      <div class="stat reveal"><span class="stat__num">{{numbers.rais}}%</span><span class="stat__label">рейсов вовремя</span></div>
     </div>
   </section>
 

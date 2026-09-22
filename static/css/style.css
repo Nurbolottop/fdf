@@ -54,6 +54,10 @@ img { max-width: 100%; display: block; }
   background: var(--blue); color: #fff; border-radius: 12px; font-size: 18px;
   transform: rotate(-15deg); box-shadow: 0 8px 18px rgba(37,99,235,.3);
 }
+.logo__img {
+  width: 38px; height: 38px; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(37,99,235,.3);
+}
 .logo__text strong { color: var(--blue); }
 .logo--light .logo__text, .logo--light .logo__text strong { color: #fff; }
 
